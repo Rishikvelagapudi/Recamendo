@@ -52,17 +52,22 @@ if df is not None:
                     st.error(result["error"])
                 else:
                     st.success(f"Top {len(result['data'])} movies in '{genre_name}':")
-                    for item in result["data"]:
-                        st.write("---")
-                        col1, col2 = st.columns([1, 3])
-                        with col1:
-                            if item.get('Poster') and pd.notnull(item['Poster']):
-                                st.image(item['Poster'], use_container_width=True)
-                        with col2:
-                            st.markdown(f"**{item['Movie']}**")
-                            st.write(f"🎭 Genre: {item['Genre']}")
-                            if pd.notnull(item['Rating']):
-                                st.write(f"⭐ Rating: {item['Rating']}")
+                    
+                    # Display in a grid format with up to 5 columns per row
+                    cols_per_row = 5
+                    for i in range(0, len(result["data"]), cols_per_row):
+                        cols = st.columns(cols_per_row)
+                        for j in range(cols_per_row):
+                            if i + j < len(result["data"]):
+                                item = result["data"][i + j]
+                                with cols[j]:
+                                    if item.get('Poster') and pd.notnull(item['Poster']):
+                                        st.image(item['Poster'], use_container_width=True)
+                                    st.markdown(f"**{item['Movie']}**")
+                                    st.write(f"🎭 {item['Genre']}")
+                                    if pd.notnull(item['Rating']):
+                                        st.write(f"⭐ {item['Rating']}")
+                                    st.write("---")
         else:
             st.warning("Please select a genre.")
 else:
