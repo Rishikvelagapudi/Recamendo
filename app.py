@@ -48,11 +48,16 @@ if df is not None:
                         st.success(f"Top {len(result['data'])} movies similar to '{movie_name}':")
                         for item in result["data"]:
                             st.write("---")
-                            st.markdown(f"**{item['Movie']}**")
-                            st.write(f"🎭 Genre: {item['Genre']}")
-                            if pd.notnull(item['Rating']):
-                                st.write(f"⭐ Rating: {item['Rating']}")
-                            st.write(f"📊 Similarity Score: {item['Similarity Score']}")
+                            col1, col2 = st.columns([1, 3])
+                            with col1:
+                                if item.get('Poster') and pd.notnull(item['Poster']):
+                                    st.image(item['Poster'], use_container_width=True)
+                            with col2:
+                                st.markdown(f"**{item['Movie']}**")
+                                st.write(f"🎭 Genre: {item['Genre']}")
+                                if pd.notnull(item['Rating']):
+                                    st.write(f"⭐ Rating: {item['Rating']}")
+                                st.write(f"📊 Similarity Score: {item['Similarity Score']}")
             else:
                 st.warning("Please enter a movie name.")
 
@@ -80,10 +85,15 @@ if df is not None:
                         st.success(f"Top {len(result['data'])} movies in '{genre_name}':")
                         for item in result["data"]:
                             st.write("---")
-                            st.markdown(f"**{item['Movie']}**")
-                            st.write(f"🎭 Genre: {item['Genre']}")
-                            if pd.notnull(item['Rating']):
-                                st.write(f"⭐ Rating: {item['Rating']}")
+                            col1, col2 = st.columns([1, 3])
+                            with col1:
+                                if item.get('Poster') and pd.notnull(item['Poster']):
+                                    st.image(item['Poster'], use_container_width=True)
+                            with col2:
+                                st.markdown(f"**{item['Movie']}**")
+                                st.write(f"🎭 Genre: {item['Genre']}")
+                                if pd.notnull(item['Rating']):
+                                    st.write(f"⭐ Rating: {item['Rating']}")
             else:
                 st.warning("Please select a genre.")
 else:

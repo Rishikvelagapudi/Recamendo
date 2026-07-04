@@ -1,21 +1,21 @@
-Movie,Genre,Rating
-Avengers,Action,4.5
-Batman,Action,4.8
-John Wick,Action,4.6
-Mission Impossible,Action,4.4
-Titanic,Romance,4.7
-The Notebook,Romance,4.3
-Interstellar,Sci-Fi,4.9
-Inception,Sci-Fi,4.8
-Toy Story,Animation,4.5
-Frozen,Animation,4.2
-Coco,Animation,4.7
-Finding Nemo,Animation,4.6
-Gravity,Sci-Fi,4.1
-The Martian,Sci-Fi,4.4
-Avatar,Sci-Fi,4.6
-Arrival,Sci-Fi,4.3
-Spider-Man,Action,4.2
-Gladiator,Action,4.5
-Pride and Prejudice,Romance,4.4
-La La Land,Romance,4.3
+Movie,Genre,Rating,Poster
+Avengers,Action,4.5,https://image.tmdb.org/t/p/w500/RYMX2wcKCBAr24UyPD7xwmja8y.jpg
+Batman,Action,4.8,https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg
+John Wick,Action,4.6,https://image.tmdb.org/t/p/w500/wXqifTgeX8GzKqF6M3yQ0LMBbFw.jpg
+Mission Impossible,Action,4.4,https://image.tmdb.org/t/p/w500/1PRWGcO7EmwgELR83F7QvBfQp2a.jpg
+Titanic,Romance,4.7,https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg
+The Notebook,Romance,4.3,https://image.tmdb.org/t/p/w500/rNzQyW4f8B8cQeg7Dgj3n6eT5k9.jpg
+Interstellar,Sci-Fi,4.9,https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg
+Inception,Sci-Fi,4.8,https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg
+Toy Story,Animation,4.5,https://image.tmdb.org/t/p/w500/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg
+Frozen,Animation,4.2,https://image.tmdb.org/t/p/w500/kgwjIb2RWgXXhH6yqF0L4pI092L.jpg
+Coco,Animation,4.7,https://image.tmdb.org/t/p/w500/gGEsBPAijhVUFoiNpzZZyI6qw1D.jpg
+Finding Nemo,Animation,4.6,https://image.tmdb.org/t/p/w500/ggQ6o8X598EYKJPw7R7ZPEB3O8d.jpg
+Gravity,Sci-Fi,4.1,https://image.tmdb.org/t/p/w500/jPf59E1zT9sNn6Z22n4hY1K0x1N.jpg
+The Martian,Sci-Fi,4.4,https://image.tmdb.org/t/p/w500/5BHuvQ6p9kfc091Z8RiFNhCwL4b.jpg
+Avatar,Sci-Fi,4.6,https://image.tmdb.org/t/p/w500/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg
+Arrival,Sci-Fi,4.3,https://image.tmdb.org/t/p/w500/1X6tU6x5x5Z4vKj2rY3Kx2L2n3T.jpg
+Spider-Man,Action,4.2,https://image.tmdb.org/t/p/w500/gh4cZbhZxyTbgxQPxD0dOudNPTn.jpg
+Gladiator,Action,4.5,https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvqV.jpg
+Pride and Prejudice,Romance,4.4,https://image.tmdb.org/t/p/w500/v9M5uS84G7rI6u3I1i3fEcw1T9e.jpg
+La La Land,Romance,4.3,https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rl0.jpg

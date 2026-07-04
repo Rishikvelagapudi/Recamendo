@@ -42,6 +42,7 @@ def recommend_by_movie(movie_name: str, df: pd.DataFrame, top_n: int = 5):
             "Movie": df['Movie'].iloc[i],
             "Genre": df['Genre'].iloc[i],
             "Rating": df.get('Rating', pd.Series([None]*len(df))).iloc[i],
+            "Poster": df.get('Poster', pd.Series([None]*len(df))).iloc[i],
             "Similarity Score": f"{score * 100:.2f}%"
         })
         
@@ -78,7 +79,8 @@ def recommend_by_genre(genre_name: str, df: pd.DataFrame, top_n: int = 5):
         recommendations.append({
             "Movie": row['Movie'],
             "Genre": row['Genre'],
-            "Rating": row.get('Rating', 'N/A')
+            "Rating": row.get('Rating', 'N/A'),
+            "Poster": row.get('Poster', None)
         })
         
     return {"data": recommendations}
