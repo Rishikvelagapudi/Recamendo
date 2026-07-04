@@ -27,10 +27,8 @@ st.markdown("Discover your next favorite movie based on your interests!")
 if df is not None:
     # Sidebar for preferences
     st.sidebar.header("Recommendation Options")
+    # Top-N is hardcoded to 5 recommendations
     
-    # Number of recommendations
-    top_n = st.sidebar.slider("Number of recommendations", min_value=1, max_value=20, value=5)
-
     st.subheader("Search by Genre")
     
     # Get unique genres from the dataset
@@ -46,7 +44,7 @@ if df is not None:
     if st.button("Recommend Movies"):
         if genre_name:
             with st.spinner("Finding top movies in this genre..."):
-                result = recommend_by_genre(genre_name, df, top_n)
+                result = recommend_by_genre(genre_name, df, 5)
                 
                 if "error" in result:
                     st.error(result["error"])
